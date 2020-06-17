@@ -1,111 +1,651 @@
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Me and you</title>
+<meta name="keywords" content="design blog, my art, my design, my wall, free website template, CSS, HTML" />
+<meta name="description" content="design blog, my art, my design, my wall, free website template provided by templatemo.com" />
+</head>
 <style>
-	body {
-  font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #857a40;
+	background: #000000;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
+a:link, a:visited { color: #f1d72b; text-decoration: none; font-weight: normal;} 
+a:active, a:hover { color: #f1d72b; text-decoration: underline;}
+
+
+
+p {
+	margin: 0px;
+	padding: 0px;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
+img {
+	margin: 0px;
+	padding: 0px;
+	border: none;
 }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
+.cleaner { clear: both; width: 100%; height: 1px; font-size: 1px;  }
+
+.cleaner_w10 { float: left; width: 10px; height: 100%; font-size: 1px;	}
+.cleaner_h10 { clear: both; width: 100%; height: 10px; font-size: 1px;	}
+.cleaner_h20 { clear: both; width: 100%; height: 20px; font-size: 1px;	}
+.cleaner_h30 { clear: both; width: 100%; height: 30px; font-size: 1px;	}
+.cleaner_h40 { clear: both; width: 100%; height: 40px; font-size: 1px;	}
+.divider_h60 { clear: both; width: 100%; height: 60px; font-size: 1px; background: url(images/templatemo_horizontal_divider.jpg) center repeat-x; }
+
+/* menu */
+#templatemo_menu_wrapper{
+	width:100%;
+	height: 51px;	
+	margin: 0 auto;
+	color: #ffffff;
+	background: url(images/templatemo_menu_bg_repeat.gif) repeat-x;
 }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+#templatemo_menu_wrapper #templatemo_menu_panel{
+	width: 940px;
+	height: 51px;	
+	margin:0 auto;
+	padding: 0 60px;
+	background: url(images/templatemo_menu_bg.gif) no-repeat;
 }
 
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
+#templatemo_menu_panel ul {
+	float: right;
+	margin: 15px 0 0 0;
+	padding: 0;
+	list-style: none;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+#templatemo_menu_panel ul li{
+	display: inline;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
+#templatemo_menu_panel ul li a{
+	float: left;
+	padding: 1px 25px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: #46c2bd;
+	border-right: 1px solid #000000;	
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
+#templatemo_menu_panel li a:hover, #templatemo_menu_panel li .current{
+	color: #a6d750;
 }
-</style>
+
+#templatemo_menu_panel li .last {
+	padding-right: 0px;
+	border-right: none;
+}
+/* end of menu */
+
+/* header */
+#templatemo_header_wrapper{
+	clear: both;
+	width:100%;
+	height: 200px;	
+	margin: 0 auto;
+}
+
+#templatemo_header_wrapper #templatemo_header_panel{
+	width: 940px;
+	height: 200px;	
+	margin:0 auto;
+	padding: 0 60px;
+	background: url(images/templatemo_header_bg.gif) no-repeat;
+}
+
+#templatemo_header_panel .templatemo_header{
+	float: left;
+	margin: 80px 0 0 0;
+	width: 400px;
+	height: 85px;
+	background: url(images/templatemo_logo.png) top left no-repeat;
+}
+
+#templatemo_header_panel .templatemo_header_right_section{
+	float: right;
+	margin: 50px 0 0 50px;
+	width: 420px;
+}
+
+.templatemo_header_right_section .rss_twitter_section {
+	float: right;
+	text-align: right;
+	height: 42px;
+}
+
+.rss_twitter_section .rss_twitter_box {
+	float: left;
+	color: #dbd23e;
+	font-size: 15px;
+	font-weight: bold;
+	height: 42px;
+	width: 200px;
+}
+
+.rss_twitter_box img {
+	vertical-align: text-bottom;
+}
+
+.templatemo_header_right_section .search_box {
+	clear: both;
+	float: right;
+	padding-top: 20px;
+	border-top: 2px solid #443d3d;
+	margin-top: 20px;
+	width: 325px;
+}
+
+.search_box  form {
+	margin: 0px;
+	padding: 0px;
+}
+
+#searchfield{
+	background:#2c2c2c;
+	border: 1px solid #333333;
+	color: #fff;
+	font-size: 13px;
+	font-variant: normal;
+	height: 19px;
+	line-height: normal;
+	padding: 4px;
+	width: 200px;
+}
+
+
+#searchbutton{
+	background: url(images/templatemo_search_button.jpg); 
+	border: none;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	margin: 0 0 0 10px;
+	padding: 0 6px;
+	text-align: center;
+	vertical-align: bottom;
+	white-space: pre;
+	width: 100px;
+}
+
+/* end of header */
+
+/* content */
+#templatemo_content_panel{
+	clear: both;
+	width:100%;
+	margin: 0 auto;
+	color: #ffffff;
+}
+
+#templatemo_content_wrapper {
+	clear: both;
+	position: relative;
+	width: 1060px;
+	margin:0 auto;
+	padding-bottom: 20px;
+	background: url(images/templatemo_content_middle.gif) repeat-y;	
+}
+
+#templatemo_content_wrapper #templatemo_content_bottom {
+	clear: both;
+	position: absolute;
+	width: 1060px;
+	height: 20px;
+	display: block;
+	bottom: 0px;
+	left: 0px;
+	margin:0 auto;
+	background: url(images/templatemo_content_bottom.gif) no-repeat;	
+}
+
+#templatemo_content {
+	padding: 40px 60px 20px 60px;
+	background: url(images/templatemo_content_top.gif) top center no-repeat; 
+}
+
+#templatemo_content .content_title_01 {
+	font-size:18px;
+	color: #4eaeac;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+#templatemo_content #content_left{
+	float: left;
+	padding: 0 0 0 30px;
+	width: 560px;
+}
+
+#content_left .post_section {
+	clear: both;
+}
+
+.post_section .post_header {
+	width: 560px;
+}
+
+.post_title_info {
+	float: left;
+	width: 500px;
+}
+
+.post_title_info .post_title {
+	font-size: 20px;
+	color: #51c9c6;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+.post_title_info  .post_info {
+	clear: both;
+	font-size: 14px;
+	color: #CCC;
+	margin: 0 0 20px 0;
+}
+
+.post_header .comment {
+	float: right;
+	width: 50px;
+	height: 40px;
+	text-align: center;
+	padding: 10px 0 0 0;
+	font-size: 24px;
+	color: #333;
+	background: url(images/templatemo_comment_icon.jpg) no-repeat;
+}
+
+.post_content {
+	clear: both;
+}
+
+.post_content img {
+	border: 5px solid #1a1a1a;
+	margin-bottom: 10px;
+}
+
+.post_content .link_button a{
+	float: right;
+	clear: both;
+	margin-top: 10px;
+	display: block;
+	color: #f1d72b;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.post_content .link_button a:hover{
+	color: #f1d72b;
+}
+
+#templatemo_content #content_right{
+	float: right;	
+	padding: 0 30px;
+	width: 260px;
+	background:url(images/templatemo_vertical_divider.gif) left repeat-y;
+}
+
+#content_right .content_right_titile_01 {
+	font-size: 20px;
+	color: #747474;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #1d1d1d;
+}
+
+#content_right .ads_250_250 {
+	border: 5px solid #1a1a1a;
+}
+
+#content_right .content_right_section {
+	clear: both;
+	width: 260px;
+}
+
+.ads_125_125 {
+	float: left;
+	width: 125px;
+	height: 125px;
+	margin: 0 0 10px 0;
+}
+
+.right_padding_10 {
+	margin-right: 10px;
+}
+
+.recent_post {
+	color: #747474;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #1a1a1a;
+}
+
+.recent_post .post_title {
+	color: #4eaeac;
+	font-weight: bold;
+}
+
+.content_right_section ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.content_right_section li {
+	margin: 0 0 3px 0;
+	padding: 0px;
+	background: #141414;
+}
+
+.content_right_section li:hover {
+	background: #1d1d1d;
+}
+
+.content_right_section li a{
+	width: 260px;	
+	padding: 2px 10px;
+	color: #cccccc;
+	outline: none;
+
+}
+/* end of contetn */
+
+/* bottom */
+
+#templatemo_bottom_wrapper{
+	clear: both;
+	width:100%;
+	margin: 0 auto;
+}
+
+#templatemo_bottom_wrapper #templatemo_bottom_panel{
+	width: 940px;
+	margin:0 auto;
+	padding: 0 60px;
+	color: #706a3f;
+}
+
+.templatemo_bottom_title {
+	color: #958836;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0 0 10px 0;
+	margin: 0 0 10px 0;
+}
+
+#templatemo_bottom_panel .bottom_section_box {
+	float: left;
+	margin-right: 35px;
+	width: 200px;
+}
+
+.bottom_section_box ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.bottom_section_box li {
+	margin: 0px;
+	padding: 0 0 3px 0;
+}
+
+.bottom_section_box li a, .bottom_section_box li a:hover, .bottom_section_box li a:visited {
+	color: #706a3f;
+	text-decoration: none;
+	font-weight: normal;
+}
+/* end of bottom */
+</style>	
 <body>
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
+<div id="templatemo_menu_wrapper">
+<!-- Free Website Template from www.TemplateMo.com -->
+    <div id="templatemo_menu_panel">
+        <ul>
+            <li><a href="index.html"  class="current">Home</a></li>
+            <li><a href="#">Wallpapers</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Archives</a></li>  
+            <li><a href="#">About</a></li> 
+            <li><a href="#" class="last">Contact</a></li>                     
+        </ul> 
+    </div>
+</div> <!-- end of menu -->
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
-	</body>
+<div id="templatemo_header_wrapper">
+    <div id="templatemo_header_panel">        
+        <div class="templatemo_header"></div>        
+        
+        <div class="templatemo_header_right_section">
+        	<div class="rss_twitter_section">
+                <div class="rss_twitter_box">
+                    Subscribe by RSS <img src="images/rss.png" alt="RSS Icon" />
+                </div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+                
+                <div class="rss_twitter_box">
+                     Follow me on Twitter <img src="images/twitter.png" alt="Twitter Icon" />
+                </div>
+            </div>
+            
+            <div class="search_box">
+                <form action="#" method="get">
+                    <input type="text" name="q" size="10" id="searchfield" title="searchfield" />
+            <input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" />
+                </form>
+            </div> 
+        </div>
+                
+    </div> <!-- end of header panel -->
+    <div class=" cleaner">&nbsp;</div>
+</div> <!-- end of header wrapper -->
+
+<div id="templatemo_content_panel">
+    <div id="templatemo_content_wrapper">
+        
+        <div id="templatemo_content">
+        
+        	<div id="content_left">
+            
+            	<div class="post_section">
+                	<div class="post_header">
+                        <div class="post_title_info">
+                            <div class="post_title">Free Website Templates</div>
+                            <div class="post_info">Posted on May 28th in <a href="#">Web Templates</a> by templatemo.com</div>
+                      </div>
+                        <div class="comment">
+                        	48
+                        </div>
+                    </div>
+                        
+                    <div class="post_content">
+                        <img src="images/templatemo_image_01.jpg" alt="image 1" />
+                        <p><a href="http://www.templatemo.com" target="_parent">templatemo.com</a> provides a lot of high quality <a href="http://www.templatemo.com/" target="_parent">free css templates</a> for your personal or commercial websites. All templates are absolutely free to download, modify and apply for your websites. All of them are W3C standard compliant XHTML/CSS layouts. Enjoy!</p>
+                      <div class="link_button"><a href="#">Continue reading...</a></div>
+					</div>
+                    <div class="cleaner">&nbsp;</div>
+                </div>
+                
+                <div class="divider_h60">&nbsp;</div>
+                
+                <div class="post_section">
+                	<div class="post_header">
+                        <div class="post_title_info">
+                            <div class="post_title">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
+                            <div class="post_info">Posted on May 25th in <a href="#">Photography</a> by templatemo.com</div>
+                      </div>
+                        <div class="comment">
+                        	64
+                        </div>
+                    </div>
+                        
+                    <div class="post_content">
+                        <img src="images/templatemo_image_03.jpg" alt="image 2" />
+                        <p>Ut nec vestibulum odio. Vivamus vitae nibh eu sem malesuada rutrum et sit amet magna. Praesent ornare mollis lacus, id egestas leo molestie at. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent aliquam velit a magna sodales quis elementum ipsum auctor. Ut at metus leo, et dictum sem.</p>
+                        <div class="link_button"><a href="#">Continue reading...</a></div>
+					</div>
+                </div>
+                
+                <div class="divider_h60">&nbsp;</div>
+                
+                <div class="post_section">
+                	<div class="post_header">
+                        <div class="post_title_info">
+                            <div class="post_title">Class aptent taciti sociosqu ad litora torquent</div>
+                            <div class="post_info">May 23th in Photography by templatemo.com</div>
+                        </div>
+                        <div class="comment">
+                        	32
+                        </div>
+                    </div>
+                        
+                    <div class="post_content">
+                        <img src="images/templatemo_image_02.jpg" alt="image 3" />
+                        <p>Vivamus convallis laoreet nulla, sagittis elementum velit sollicitudin eget. Integer et enim mauris. Quisque aliquam ullamcorper varius. Nam nunc purus, commodo quis consequat vitae, accumsan sit amet nisl. Aenean dapibus tortor vel tellus pretium convallis.</p>
+                        <div class="link_button"><a href="#">Continue reading...</a></div>
+					</div>
+                </div>
+            
+            	<div class="cleaner">&nbsp;</div>
+            </div> <!-- end of content left -->
+        	
+            <div id="content_right">
+            
+            	<div class="ads_250_250">
+                	<a href="http://www.templatemo.com" target="_parent"><img src="images/templatemo_ads_02.jpg" alt="250x250 banner" /></a>                </div>
+                
+              <div class="cleaner_h30">&nbsp;</div>
+                
+                <div class="content_right_section">
+		            <div class="content_right_titile_01">Archives</div>
+                    <ul>
+                    	<li><a href="#">May 2048</a></li>
+                        <li><a href="#">April 2048</a></li>
+                        <li><a href="#">March 2048</a></li>
+                        <li><a href="#">February 2048</a></li>
+                        <li><a href="#">January 2048</a></li>
+                        <li><a href="#">December 2047</a></li>
+                     </ul>
+                </div> 
+                
+                <div class="cleaner_h30">&nbsp;</div>
+                
+                <div class="content_right_section">
+                	<div class="ads_125_125 right_padding_10">
+                    	<a href="#"><img src="images/templatemo_ads.jpg" alt="125x125 banner 1" /></a>
+                    </div>
+                    <div class="ads_125_125">
+                    	<a href="#"><img src="images/templatemo_ads.jpg" alt="125x125 banner 2" /></a>
+                    </div>
+                    <div class="ads_125_125 right_padding_10">
+                    	<a href="#"><img src="images/templatemo_ads.jpg" alt="125x125 banner 3" /></a>
+                    </div>
+                    <div class="ads_125_125">
+                    	<a href="#"><img src="images/templatemo_ads.jpg" alt="125x125 banner 4" /></a>
+                    </div>
+                </div>
+                
+                <div class="cleaner_h30">&nbsp;</div>
+                
+                <div class="content_right_section">
+		            <div class="content_right_titile_01">Recent Posts</div>
+                    <div class="recent_post">
+                    	<div class="post_title">Sed metus nisl, placerat vitae iaculis in</div>
+                        Aliquam nec est quis felis venenatis imperdiet. Duis placerat luctus sem.
+                    </div>
+                    
+                    <div class="recent_post">
+                    	<div class="post_title">Donec molestie aliquet nisi eu facilisis</div>
+                        In vitae placerat enim. Aenean elementum lectus eleifend a pellentesque lacus aliquet. 
+                    </div>
+                    
+                    <div class="recent_post">
+                    	<div class="post_title">Proin  magna amet fermentum dignissim</div>
+                        Nulla gravida, lacus molestie convallis dolor sem suscipit nisl, ut pharetra erat leo in elit.
+                  </div>
+                    
+                    <div class="recent_post">
+                    	<div class="post_title">Fusce pulvinar euismod urna vel viverra</div>
+                        Quisque malesuada laoreet tellus vel iaculis. Morbi nulla leo euismod pulvinar erat.
+                    </div>
+                    
+                    <div class="recent_post">
+                    	<div class="post_title">Class aptent taciti sociosqu ad litora</div>
+                        Curabitur vestibulum est eu purus bibendum eu eleifend diam tempor. Fusce metus eros, faucibus ut hendrerit ac.
+                    </div>
+                </div>
+                
+                
+                <div class="cleaner">&nbsp;</div>
+            </div> <!-- end of content right -->           				
+			&nbsp;
+         <div class="cleaner">&nbsp;</div>        
+         </div>    <!-- end of content -->
+
+		<div id="templatemo_content_bottom">&nbsp;</div>
+        <div class="cleaner">&nbsp;</div>
+    </div> <!-- end of content wrapper -->
+</div> <!-- end of content panel -->
+
+<div class="cleaner_h30">&nbsp;</div>
+
+<!-- bottom panel -->
+<div id="templatemo_bottom_wrapper">
+    <div id="templatemo_bottom_panel">
+    
+        <div class="bottom_section_box">
+        <div class="templatemo_bottom_title">Copyright Info.</div>
+        <p><a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a></p>
+        <div class="cleaner">&nbsp;</div>
+        </div>
+        
+        <div class="bottom_section_box">
+        <div class="templatemo_bottom_title"> Partners</div>
+        <ul>
+        <li><a href="http://www.templatemo.com" title="Free CSS Templates" target="_blank">CSS Templates</a></li>
+        <li><a href="http://www.flashmo.com" title="Free Flash Templates" target="_blank">Flash Templates</a></li>
+        <li><a href="http://www.webdesignmo.com/blog" title="Web Design Resources" target="_blank">Web Design</a></li>
+        <li><a href="http://www.photovaco.com" title="Free Stock Photos" target="_blank">Free Photos</a></li>
+        </ul>
+        <div class="cleaner">&nbsp;</div>
+        </div>
+        
+        <div class="bottom_section_box">
+            <div class="templatemo_bottom_title">Other Links</div>
+                <ul>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            <div class="cleaner">&nbsp;</div>
+        </div>
+        
+        <div class="bottom_section_box">
+        <div class="templatemo_bottom_title">XHTML/CSS validations</div>
+        <a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" width="88" height="31" vspace="8" border="0" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"  src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" vspace="8" border="0" /></a>
+        <div class="cleaner">&nbsp;</div>
+        </div>
+        <!-- Free Website Templates @ TemplateMo.com -->
+        <div class="cleaner">&nbsp;</div>
+    </div>
+</div> <!-- end of bottom panel -->
+<div class="cleaner_h20">&nbsp;</div>
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
 </html>
