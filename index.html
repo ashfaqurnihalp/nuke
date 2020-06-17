@@ -1,111 +1,107 @@
-<html> 
-<head> 
-<title>Form Check</title>
-<script> 
-function formcheck()                                    
-{ 
-    var name = document.forms["RegForm"]["Name"];               
-    var password = document.forms["RegForm"]["Password"];
-	var repassword= document.forms["RegForm"]["repassword"];
-	var x=document.forms["RegForm"]["EMail"].value;  
-	var atposition=x.indexOf("@");  
-	var dotposition=x.lastIndexOf("."); 
-	var birthday = document.forms["RegForm"]["birthday"].value;
-	var bir = birthday.split("-");
-   
-    if (name.value == "")                                  
-    { 
-        window.alert("Username cannot be empty"); 
-        name.focus(); 
-        return false; 
-    }
-	else if (name.value.length<4||name.value.length>12)
-	{
-		window.alert("Username must between 4 to 12 characters");
-		return false;
-	}
-	
-    if (password.value == "")                        
-    { 
-        window.alert("Password cannot be empty"); 
-        password.focus(); 
-        return false; 
-    }
-	else if (password.value.length<6||password.value.length>12)
-	{
-		window.alert("Password must be between 6 to 12 characters");
-		return false;
-	}
-	if (password.value != repassword.value) 
-	{
-		window.alert("passwords doesn't match");
-        return false;
-	}   
-	if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
-	{  
-		window.alert("Please enter a valid e-mail address example:abc@xyz.com");  
-		return false;  
-	}
-	if(birthday == "")
-	{
-        window.alert("birthday cannot be empty!");
-        return false;
-    }
-    else if(birthday.indexOf("-") == -1) 
-	{
-		window.alert("birthday should contain character \"-\"");
-        return false;
-    }
-	else if(bir.length!=3 || bir[0].length != 4 || parseInt(bir[0]) < 1900 || parseInt(bir[0]) > new Date().getFullYear() || bir[1].length > 2 || parsInt(bir[1])<1 || parseInt(bir[1])>12 || bir[2].length > 2 || parseInt(bir[2]) < 1 || parseInt(bir[2]) > 31) 
-	{              
-        window.alert("birthday format is wrong");
-        return false;
-    }
-
-return true;	
+<style>
+	body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
 }
-</script> 
-  
-<style> 
-p {                                         
-    margin-left: 70px; 
-    font-weight: bold ; 
-    float: left; 
-    clear: left; 
-    width: 100px; 
-    text-align: left; 
-    margin-right: 10px; 
-    font-family:sans-serif,bold, Arial, Helvetica; 
-    font-size:16px; 
-} 
-   
-div {  
-    box-sizing: border-box; 
-    width: 100%; 
-    border: 100px solid black; 
-    float: left; 
-    align-content: center; 
-    align-items: center; 
-} 
-   
-form {                                         
-    margin: 0 auto; 
-    width: 600px; 
-}</style></head> 
-   
-<body> 
-<h1 style="text-align: center"> REGISTRATION FORM </h1>           
-<div>
-<form name="RegForm"  onsubmit="return formcheck()" action="new 2.html" method="post">  
-      
-    <p>Name: <input type="text" size=50 name="Name"> </p><br>         
-    <p>Password: <input type="password" size=50 name="Password"> </p><br>
-	<p>Re-password:<input type="password" size=50 name="repassword"> </p><br>
-	<p>E-mail: <input type="text" size=50 name="EMail">  </p><br> 
-	<p>Birthday: <input type="text" size=50 name="birthday"></p><br>
-    <p><input type="submit" value="send" name="Submit">        
-    </p>          
-</form> 
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+<div class="header">
+  <h2>Blog Name</h2>
 </div>
-</body> 
-</html>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
